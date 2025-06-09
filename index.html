@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sammi 🎂</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body, html { height: 100%; width: 100%; overflow: hidden; background: #000; color: white; }
+        .slider { position: relative; width: 100%; height: 100%; display: flex; transition: transform 0.5s ease; }
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .slide img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .slide p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .next-btn {
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider" class="slider">
+        <div class="slide" style="background-image: url('6213096602768360984.jpg');">
+            <img src="6213096602768360984.jpg" alt="Cute Image">
+            <p>🎉 Happy Birthday Sammi! 🎈<br>Thank you for always making me feel valued. 🥰</p>
+            <button class="next-btn" onclick="nextSlide()">&gt;&gt;&gt;&gt;</button>
+        </div>
+        <div class="slide" style="background-image: url('6213096602768360983.jpg');">
+            <img src="6213096602768360983.jpg" alt="Cute Image">
+            <p>🌸 Sammi, you're a blessing! 🌟<br>Thank you for always being there for me. 💖</p>
+            <button class="next-btn" onclick="nextSlide()">&gt;&gt;&gt;&gt;</button>
+        </div>
+        <div class="slide" style="background-image: url('6213096602768360982.jpg');">
+            <img src="6213096602768360982.jpg" alt="Cute Image">
+            <p>🎂 Wishing you joy, Sammi! ✨<br>May your day be filled with love and happiness. 💝</p>
+            <button class="next-btn" onclick="nextSlide()">🥳 Finish</button>
+        </div>
+    </div>
+
+    <script>
+        let index = 0;
+        function nextSlide() {
+            const slider = document.getElementById('slider');
+            index = (index + 1) % 3;
+            slider.style.transform = 'translateX(-' + (index * 100) + '%)';
+        }
+    </script>
+</body>
+</html>
